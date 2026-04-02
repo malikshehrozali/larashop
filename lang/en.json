@@ -1,0 +1,23 @@
+{
+    "title.welcome": "Welcome",
+    "title.shop": "Shop",
+    "title.dashboard": "Dashboard",
+    "title.profile": "Profile",
+
+    "nav.home": "Home",
+    "nav.shop": "Shop",
+    "nav.favourites": "Favourites",
+    "nav.profile": "Profile",
+    "nav.login": "Login",
+    "nav.language": "Urdu",
+    "loginTitle":"Log in to your account",
+    "loginDescription": "Enter your details below or Create new account if you don't have one.",
+    "forgotPassword": "Forgot your password?",
+    "createAccount": "Create an account",
+    "createAccountDescription": "Enter your details below to create your account.",
+    "fashion": "Fashion",
+    "reimagined": "Reimagined",
+    "heroDescription": "Experience luxury fashion with cutting-edge design. Exclusive pieces that make you stand out from the crowd.",
+    "explore": "Explore Now",
+    "viewCatalog": "View Catalog"
+}

@@ -34,6 +34,21 @@ class HandleInertiaRequests extends Middleware
      *
      * @return array<string, mixed>
      */
+
+    protected function translations(): array
+{
+    $locale = app()->getLocale();
+    $path = lang_path("{$locale}.json");;
+
+    if (! file_exists($path)) {
+        return [];
+    }
+
+    $json = json_decode(file_get_contents($path), true);
+
+    return is_array($json) ? $json : [];
+}
+
     public function share(Request $request): array
     {
         [$message, $author] = str(Inspiring::quotes()->random())->explode('-');
@@ -45,6 +60,9 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'locale'=> app()->getLocale(),
+            'locales' => config('app.locales', ['en', 'ur']),
+            'translations' => $this->translations(),
         ]);
     }
 }

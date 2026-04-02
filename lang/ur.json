@@ -1,0 +1,23 @@
+{
+    "title.welcome": "خوش آمدید",
+    "title.shop": "دکان",
+    "title.dashboard": "ڈیش بورڈ",
+    "title.profile": "پروفائل",
+
+    "nav.home": "ہوم",
+    "nav.shop": "دکان",
+    "nav.favourites": "پسندیدہ",
+    "nav.profile": "پروفائل",
+    "nav.login": "لاگ اِن",
+    "nav.language": "English",
+    "loginTitle": "اپنے اکاؤنٹ میں لاگ ان کریں",
+    "loginDescription": "اپنی تفصیلات نیچے درج کریں یا نیا اکاؤنٹ بنائیں اگر آپ کے پاس ایک نہیں ہے۔",
+    "forgotPassword": "کیا آپ اپنا پاس ورڈ بھول گئے ہیں؟",
+    "createAccount": "اکاؤنٹ بنائیں",
+    "createAccountDescription": "اپنی تفصیلات نیچے درج کریں تاکہ آپ اپنا اکاؤنٹ بنائیں",
+    "fashion": "فیشن",
+    "reimagined": "نئی شکل میں",
+    "heroDescription": "جدید ڈیزائن کے ساتھ لگژری فیشن کا تجربہ کریں۔ خصوصی ٹکڑے جو آپ کو بھیڑ سے الگ کرتے ہیں۔",
+    "explore": "اب تلاش کریں",
+    "viewCatalog": "کیٹلاگ دیکھیں"
+}

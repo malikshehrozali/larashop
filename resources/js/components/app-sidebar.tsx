@@ -2,35 +2,49 @@ import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
+import { useTranslate } from '@/hooks/use-translate';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { BookOpen, Folder, Home, ShoppingBag, Vegan } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
-        url: '/dashboard',
-        icon: LayoutGrid,
+        title: 'Home',
+        url: '/',
+        icon: Home,
+    },
+    {
+        title: 'Shop',
+        url: '/shop',
+        icon: ShoppingBag,
+    },
+    {
+        title: 'Your Orders',
+        url: '/orders',
+        icon: Vegan,
     },
 ];
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        url: 'https://github.com/laravel/react-starter-kit',
+        title: 'Settings',
+        url: '/settings',
         icon: Folder,
     },
     {
-        title: 'Documentation',
-        url: 'https://laravel.com/docs/starter-kits',
+        title: 'About Us',
+        url: '/about',
         icon: BookOpen,
     },
 ];
 
 export function AppSidebar() {
+    const { locale } = useTranslate();
+    const side = locale === 'ur' ? 'right' : 'left';
+
     return (
-        <Sidebar collapsible="icon" variant="inset">
+        <Sidebar collapsible="icon" variant="inset" side={side}>
             <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem>

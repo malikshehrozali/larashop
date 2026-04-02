@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
+import { useTranslate } from '@/hooks/use-translate';
 
 interface RegisterForm {
     name: string;
@@ -17,6 +18,7 @@ interface RegisterForm {
 }
 
 export default function Register() {
+    const { t } = useTranslate();
     const { data, setData, post, processing, errors, reset } = useForm<RegisterForm>({
         name: '',
         email: '',
@@ -32,7 +34,7 @@ export default function Register() {
     };
 
     return (
-        <AuthLayout title="Create an account" description="Enter your details below to create your account">
+        <AuthLayout title={t('createAccount', 'Create an account')} description={t('createAccountDescription', 'Enter your details below to create your account')}>
             <Head title="Register" />
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">

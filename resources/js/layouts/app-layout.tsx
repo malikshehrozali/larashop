@@ -1,3 +1,4 @@
+import Header from '@/components/common/Header';
 import AppLayoutTemplate from '@/layouts/app/app-sidebar-layout';
 import { type BreadcrumbItem } from '@/types';
 
