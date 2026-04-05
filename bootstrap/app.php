@@ -38,6 +38,7 @@ return Application::configure(basePath: dirname(__DIR__))
         // Route-level middleware for admin-only areas.
         $middleware->alias([
             'admin' => \App\Http\Middleware\admin::class,
+            'admin.auth' => \App\Http\Middleware\admin::class,
             'admin.permissions' => \App\Http\Middleware\CheckAdminPermissions::class,
         ]);
     })

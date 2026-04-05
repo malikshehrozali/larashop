@@ -13,14 +13,13 @@ import { FormEventHandler } from 'react';
 interface LoginForm {
     email: string;
     password: string;
-    remember: boolean;
+    remember?: boolean;
 }
 
 export default function Login() {
     const { data, setData, post, processing, errors } = useForm<LoginForm>({
         email: '',
         password: '',
-        remember: false,
     });
 
     const handleSubmit: FormEventHandler = (e) => {
@@ -31,12 +30,14 @@ export default function Login() {
     return (
         <>
             <Head title="Admin Login" />
-            <div className="flex h-screen w-full flex-col items-center justify-center">
+            <div className="flex h-screen w-full flex-col items-center justify-center text-center">
                 <Heading title="Admin Login" description="Enter your credentials to access the admin dashboard." />
                 <form className="flex w-full flex-col gap-6 px-4 lg:w-[40vw]" onSubmit={handleSubmit}>
                     <div className="grid gap-6">
                         <div className="grid gap-2">
-                            <Label htmlFor="email">Email address</Label>
+                            <div className='flex items-center'>
+                                <Label htmlFor="email">Email address</Label>
+                            </div>
                             <Input
                                 id="email"
                                 type="email"
@@ -72,13 +73,6 @@ export default function Login() {
                             {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
                             Log in
                         </Button>
-                    </div>
-
-                    <div className="text-muted-foreground text-center text-sm">
-                        Don't have an account?{' '}
-                        <TextLink href={route('register')} tabIndex={5}>
-                            Sign up
-                        </TextLink>
                     </div>
                 </form>
             </div>

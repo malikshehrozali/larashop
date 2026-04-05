@@ -1,6 +1,7 @@
+import Collections from '@/components/common/Collections';
 import Header from '@/components/common/Header';
-import Heading from '@/components/common/Heading';
 import { Hero } from '@/components/common/Hero';
+import TrendingProduct from '@/components/common/TrendingProduct';
 import { type SharedData } from '@/types';
 import { Head, usePage } from '@inertiajs/react';
 
@@ -12,8 +13,9 @@ export default function Welcome() {
             <Head title="Welcome"></Head>
             <Header />
             <Hero />
-            <div className="flex h-screen w-full items-center">
-                <Heading main="testing" sub="sub heading" />
+            <Collections />
+            <div className="my-10 py-10">
+                <TrendingProduct />
             </div>
         </>
     );
